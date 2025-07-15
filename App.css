@@ -1,0 +1,55 @@
+.auth-form, .auth-wrapper {
+  max-width: 300px;
+  margin: 40px auto;
+  padding: 1em;
+  border-radius: 8px;
+  background: #f4f4f4;
+  box-shadow: 0 2px 8px #ccc;
+}
+.kanban-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  padding: 2em;
+}
+.kanban-board {
+  display: flex;
+  flex: 3;
+  gap: 1em;
+}
+.kanban-column {
+  background: #e9e9e9;
+  border-radius: 8px;
+  flex: 1;
+  padding: 1em;
+  min-width: 220px;
+}
+.task-card {
+  background: #fff;
+  border-radius: 6px;
+  margin: .5em 0;
+  padding: .5em;
+  box-shadow: 0 1px 4px #bbb;
+  cursor: grab;
+  transition: transform 0.2s;
+  animation: cardFlip 0.5s;
+}
+@keyframes cardFlip {
+  from { transform: rotateY(90deg);}
+  to { transform: rotateY(0);}
+}
+.activity-log {
+  flex: 1;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1em;
+  max-width: 300px;
+  min-width: 200px;
+  margin-left: 1em;
+  height: fit-content;
+}
+@media (max-width: 768px) {
+  .kanban-container { flex-direction: column; }
+  .activity-log { margin-left: 0; margin-top: 1em; }
+  .kanban-board { flex-direction: column; }
+}
